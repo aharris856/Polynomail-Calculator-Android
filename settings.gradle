@@ -1,0 +1,2 @@
+rootProject.name = "Polynomial Calculator"
+include ':app'

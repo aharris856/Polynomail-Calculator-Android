@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BCC4EC"
+    tools:context=".Linear">
+
+    <TextView
+        android:id="@+id/linearHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2196F3"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:text="Linear Solver"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.009" />
+
+    <TextView
+        android:id="@+id/questionLinear"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:text="Equation Format: ax + b = 0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearHeader"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/linearInputA"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:background="#E3E3E3"
+        android:ems="10"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:inputType="text"
+        android:orientation="horizontal"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.82"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionLinear"
+        app:layout_constraintVertical_bias="0.075" />
+
+    <EditText
+        android:id="@+id/linearInputB"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:background="#E3E3E3"
+        android:ems="10"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:inputType="text"
+        android:orientation="horizontal"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.82"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearInputA"
+        app:layout_constraintVertical_bias="0.059" />
+
+    <TextView
+        android:id="@+id/linearTextA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:text="a = "
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/linearInputA"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionLinear"
+        app:layout_constraintVertical_bias="0.075" />
+
+    <TextView
+        android:id="@+id/linearTextB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:text="b = "
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/linearInputB"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearTextA"
+        app:layout_constraintVertical_bias="0.059" />
+
+    <Button
+        android:id="@+id/linearSolve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:text="Solve"
+        android:textAllCaps="true"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearInputB"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <TextView
+        android:id="@+id/linearSolution"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:orientation="horizontal"
+        android:text="\n\t\tSolution:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearSolve"
+        app:layout_constraintVertical_bias="0.01" />
+
+    <Button
+        android:id="@+id/homeButtonLinear"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        app:backgroundTint="#E6E4E4"
+        app:cornerRadius="20dp"
+        app:icon="@android:drawable/ic_menu_revert"
+        app:iconPadding="8dp"
+        app:iconTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
